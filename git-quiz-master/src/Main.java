@@ -19,14 +19,14 @@ public class Main {
         assertTrue(Arrays.equals(inputs, expects));
     }
 
-	// to sort in ascending order
+    // to sort in ascending order
     public static void bubbleSort(int[] data) {
-		// check data size
-		if (data.length>0) {
-			return;
-		}
+        // check data size
+        if (data.length  < 1) { //Changed from > 0 to < 1
+            return;
+        }
 
-		// sort
+        // sort
         for (int i=0; i<data.length; i++) {
             for (int j=0; j<data.length-i-1; j++) {
                 if (data[j]>data[j+1]) {
